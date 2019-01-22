@@ -36,10 +36,10 @@ db.sync({ force: true })
     const promise1 = Zach.setPlot(large);
     const promise2 = Jake.setPlot(medium);
 
-    console.log(Gardener.__proto__);
-    // const promise3 = Zach.setVegetable(tomato);
+    console.log(Object.keys(Zach.__proto__));
+    const promise3 = Zach.setFavorite_vegetable(tomato);
 
-    return Promise.all([promise1, promise2]);
+    return Promise.all([promise1, promise2, promise3]);
   })
   .catch(err => {
     console.log(err);
